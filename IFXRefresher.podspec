@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'Injection for Xcode auto Refresher, accelerates iOS development.'
   s.homepage = 'https://github.com/18plan/IFXRefresher'
   s.author   = { 'ShandaGames' => 'http://www.sdo.com' }
-  s.source   = { :git => 'https://github.com/18plan/IFXRefresher.git', :tag => "v#{s.version}" }
+  s.source   = { :git => 'https://github.com/18plan/IFXRefresher.git', :tag =>s.version.to_s }
 
   s.description = %{
     IFXRefresher help us develop iOS UI so much. This is a tiny library need to work together 
