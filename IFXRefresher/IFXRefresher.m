@@ -26,7 +26,7 @@
 typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
     IFXRefresherShowTypeUnknown = 0,
     IFXRefresherShowTypePresented,
-    IFXRefresherShowTypePushed,
+    IFXRefresherShowTypeNavi,
     IFXRefresherShowTypeTabbar,
     IFXRefresherShowTypeSplit,
 };
@@ -152,7 +152,7 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
     }
 
     switch (self.curViewControllerShowType) {
-        case IFXRefresherShowTypePushed: {
+        case IFXRefresherShowTypeNavi: {
             UINavigationController *navVC = vc.navigationController;
             [navVC popViewControllerAnimated:NO];
             [navVC pushViewController:newVC animated:NO];
@@ -204,38 +204,32 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
 
     if ([vc isKindOfClass:[UISplitViewController class]]) {
         UISplitViewController *svc = (UISplitViewController *) vc;
-        if (svc.viewControllers.count > 0) {
-            self.curViewControllerShowType = IFXRefresherShowTypeSplit;
-            return [self findBestViewController:svc.viewControllers.lastObject];
-        }
-        else {
-            self.curViewControllerShowType = IFXRefresherShowTypeSplit;
+        self.curViewControllerShowType = IFXRefresherShowTypeSplit;
+        if (svc.viewControllers.count <= 0) {
             return vc;
         }
+
+        return [self findBestViewController:svc.viewControllers.lastObject];
     }
 
     if ([vc isKindOfClass:[UINavigationController class]]) {
         UINavigationController *svc = (UINavigationController *) vc;
-        if (svc.viewControllers.count > 0) {
-            self.curViewControllerShowType = IFXRefresherShowTypePushed;
-            return [self findBestViewController:svc.topViewController];
-        }
-        else {
-            self.curViewControllerShowType = IFXRefresherShowTypePushed;
+        self.curViewControllerShowType = IFXRefresherShowTypeNavi;
+        if (svc.viewControllers.count <= 0) {
             return vc;
         }
+
+        return [self findBestViewController:svc.topViewController];
     }
 
     if ([vc isKindOfClass:[UITabBarController class]]) {
         UITabBarController *svc = (UITabBarController *) vc;
-        if (svc.viewControllers.count > 0) {
-            self.curViewControllerShowType = IFXRefresherShowTypeTabbar;
-            return [self findBestViewController:svc.selectedViewController];
-        }
-        else {
-            self.curViewControllerShowType = IFXRefresherShowTypeTabbar;
+        self.curViewControllerShowType = IFXRefresherShowTypeTabbar;
+        if (svc.viewControllers.count <= 0) {
             return vc;
         }
+
+        return [self findBestViewController:svc.selectedViewController];
     }
 
     self.curViewControllerShowType = self.curViewControllerShowType ?: IFXRefresherShowTypeUnknown;
