@@ -31,4 +31,6 @@ konw which params we need for current viewcontroller.
 [IFXRefresher addViewControllerName:@"viewcontroller name" withParamNames:@[@"param1", @"param2", ...]];
 //or
 [IFXRefresher addViewController:vc withParamNames:@[@"param1", @"param2", ...]];
+//or
+[IFXRefresher addViewControllerClass:vcClass withParamNames:@[@"param1", @"param2", ...]];
 ```

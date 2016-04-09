@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6154A401CB8ABDE00840573 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F6154A3E1CB8ABDE00840573 /* README.md */; };
+		F6154A421CB8AE8600840573 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = F6154A411CB8AE8600840573 /* CHANGELOG.md */; };
 		F6441BF01CB79D2B00D53855 /* IFXRefresher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6441BEF1CB79D2B00D53855 /* IFXRefresher.h */; };
 		F6441BF21CB79D2B00D53855 /* IFXRefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = F6441BF11CB79D2B00D53855 /* IFXRefresher.m */; };
 /* End PBXBuildFile section */
@@ -25,6 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F6154A3E1CB8ABDE00840573 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F6154A3F1CB8ABDE00840573 /* IFXRefresher.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IFXRefresher.podspec; sourceTree = "<group>"; };
+		F6154A411CB8AE8600840573 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		F6441BEC1CB79D2A00D53855 /* libIFXRefresher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIFXRefresher.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6441BEF1CB79D2B00D53855 /* IFXRefresher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFXRefresher.h; sourceTree = "<group>"; };
 		F6441BF11CB79D2B00D53855 /* IFXRefresher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFXRefresher.m; sourceTree = "<group>"; };
@@ -44,6 +49,9 @@
 		F6441BE31CB79D2A00D53855 = {
 			isa = PBXGroup;
 			children = (
+				F6154A411CB8AE8600840573 /* CHANGELOG.md */,
+				F6154A3E1CB8ABDE00840573 /* README.md */,
+				F6154A3F1CB8ABDE00840573 /* IFXRefresher.podspec */,
 				F6441BEE1CB79D2B00D53855 /* IFXRefresher */,
 				F6441BED1CB79D2A00D53855 /* Products */,
 			);
@@ -122,6 +130,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6154A401CB8ABDE00840573 /* README.md in Sources */,
+				F6154A421CB8AE8600840573 /* CHANGELOG.md in Sources */,
 				F6441BF21CB79D2B00D53855 /* IFXRefresher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +258,7 @@
 				F6441BF71CB79D2B00D53855 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

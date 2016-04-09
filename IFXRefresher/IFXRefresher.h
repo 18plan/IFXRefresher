@@ -26,8 +26,10 @@
 
 + (void)startMonitor;
 
++ (void)addViewController:(UIViewController *)vc withParamNames:(NSArray *)pNames;
+
 + (void)addViewControllerName:(NSString *)vcName withParamNames:(NSArray *)pNames;
 
-+ (void)addViewController:(UIViewController *)vc withParamNames:(NSArray *)pNames;
++ (void)addViewControllerClass:(Class)clazz withParamNames:(NSArray *)pNames;
 
 @end

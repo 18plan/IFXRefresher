@@ -77,6 +77,12 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
 #endif
 }
 
++ (void)addViewControllerClass:(Class)clazz withParamNames:(NSArray *)pNames {
+#ifdef DEBUG
+    [self addViewControllerName:NSStringFromClass(clazz) withParamNames:pNames];
+#endif
+}
+
 - (void)startMonitor {
     NSLog(@"#IFXRefresher# start");
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshCurrentVC) name:@"INJECTION_BUNDLE_NOTIFICATION" object:nil];
@@ -84,24 +90,29 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
 
 - (void)refreshCurrentVC {
     [self findCurViewControllerAndShowType];
-    NSMutableArray *pNames = self.configuredVCAndParams[NSStringFromClass([self.curViewController class])];
-    if (!pNames) {
-        pNames = [NSMutableArray array];
-        [self getParamNames:[self.curViewController class] toArray:pNames];
-    }
+    
+    NSMutableSet *pNames = [self getParamNames:[self.curViewController class]];
     [self addBuildInParamNames:pNames];
-
     NSDictionary *params = [self getParams:self.curViewController byNames:pNames];
+    
     NSLog(@"#IFXRefresher# ViewController[%@] paramNames[%@]", [self.curViewController class], params);
-
     [self refreshViewController:self.curViewController withParams:params];
 }
 
-- (void)addBuildInParamNames:(NSMutableArray *)pNames {
+- (NSMutableSet *)getParamNames:(Class)clazz {
+    NSMutableSet *pNames = [NSMutableSet set];
+    NSMutableArray *pNameArray = self.configuredVCAndParams[NSStringFromClass(clazz)];
+    if (pNameArray == nil || pNameArray.count == 0) {
+        [self getParamNames:[self.curViewController class] toSet:pNames];
+    }
+    return pNames;
+}
+
+- (void)addBuildInParamNames:(NSMutableSet *)pNames {
     [pNames addObjectsFromArray:@[@"hidesBottomBarWhenPushed", @"title", @"prefersStatusBarHidden"]];
 }
 
-- (void)getParamNames:(Class)clazz toArray:(NSMutableArray *)array {
+- (void)getParamNames:(Class)clazz toSet:(NSMutableSet *)nameSet {
     if ([clazz isEqual:[UIViewController class]]
             || [clazz isEqual:[UINavigationController class]]
             || [clazz isEqual:[UITabBarController class]]
@@ -116,15 +127,20 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
         const char *charParamName = property_getName(parameter);
         NSString *paramName = [NSString stringWithUTF8String:charParamName];
         if ([paramName rangeOfString:self.defaultParameterPrefix].length > 0) {
-            [array addObject:paramName];
+            [nameSet addObject:paramName];
         }
     }
     free(parameters);
-
-    [self getParamNames:[clazz superclass] toArray:array];
+    
+    //sometimes config vc is a base controller
+    NSArray *basePNames = self.configuredVCAndParams[NSStringFromClass(clazz)];
+    if(basePNames){
+        [nameSet addObjectsFromArray:basePNames];
+    }
+    [self getParamNames:[clazz superclass] toSet:nameSet];
 }
 
-- (NSDictionary *)getParams:(UIViewController *)vc byNames:(NSArray *)names {
+- (NSDictionary *)getParams:(UIViewController *)vc byNames:(NSSet *)names {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     for (NSString *pName in names) {
         //for objc call swift vc
