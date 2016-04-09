@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		F6154A401CB8ABDE00840573 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F6154A3E1CB8ABDE00840573 /* README.md */; };
 		F6154A421CB8AE8600840573 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = F6154A411CB8AE8600840573 /* CHANGELOG.md */; };
-		F6441BF01CB79D2B00D53855 /* IFXRefresher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6441BEF1CB79D2B00D53855 /* IFXRefresher.h */; };
-		F6441BF21CB79D2B00D53855 /* IFXRefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = F6441BF11CB79D2B00D53855 /* IFXRefresher.m */; };
+		F693CA0D1CB8B46700EE05C3 /* IFXRefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = F693CA0C1CB8B46700EE05C3 /* IFXRefresher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,7 +19,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				F6441BF01CB79D2B00D53855 /* IFXRefresher.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,8 +29,8 @@
 		F6154A3F1CB8ABDE00840573 /* IFXRefresher.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IFXRefresher.podspec; sourceTree = "<group>"; };
 		F6154A411CB8AE8600840573 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		F6441BEC1CB79D2A00D53855 /* libIFXRefresher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIFXRefresher.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6441BEF1CB79D2B00D53855 /* IFXRefresher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFXRefresher.h; sourceTree = "<group>"; };
-		F6441BF11CB79D2B00D53855 /* IFXRefresher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFXRefresher.m; sourceTree = "<group>"; };
+		F693CA0B1CB8B46700EE05C3 /* IFXRefresher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFXRefresher.h; sourceTree = "<group>"; };
+		F693CA0C1CB8B46700EE05C3 /* IFXRefresher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFXRefresher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,10 +47,10 @@
 		F6441BE31CB79D2A00D53855 = {
 			isa = PBXGroup;
 			children = (
+				F693CA0A1CB8B46700EE05C3 /* Source */,
 				F6154A411CB8AE8600840573 /* CHANGELOG.md */,
 				F6154A3E1CB8ABDE00840573 /* README.md */,
 				F6154A3F1CB8ABDE00840573 /* IFXRefresher.podspec */,
-				F6441BEE1CB79D2B00D53855 /* IFXRefresher */,
 				F6441BED1CB79D2A00D53855 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,13 +63,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6441BEE1CB79D2B00D53855 /* IFXRefresher */ = {
+		F693CA0A1CB8B46700EE05C3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F6441BEF1CB79D2B00D53855 /* IFXRefresher.h */,
-				F6441BF11CB79D2B00D53855 /* IFXRefresher.m */,
+				F693CA0B1CB8B46700EE05C3 /* IFXRefresher.h */,
+				F693CA0C1CB8B46700EE05C3 /* IFXRefresher.m */,
 			);
-			path = IFXRefresher;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,9 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F693CA0D1CB8B46700EE05C3 /* IFXRefresher.m in Sources */,
 				F6154A401CB8ABDE00840573 /* README.md in Sources */,
 				F6154A421CB8AE8600840573 /* CHANGELOG.md in Sources */,
-				F6441BF21CB79D2B00D53855 /* IFXRefresher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
