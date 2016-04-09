@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   with Xcode plugin injectionforxcode at https://github.com/johnno1962/injectionforxcode.
   }
 
-  s.source_files = 'IFXRefresher/*.{h,m}'
+  s.source_files = 'Source/*.{h,m}'
   s.ios.frameworks = 'Foundation', 'UIKit'
   
   s.platform = :ios
