@@ -1,4 +1,10 @@
 # Change Log
+Fix to add some possible missed params.
+
+## [1.1.1](https://github.com/18plan/IFXRefresher/releases/tag/1.0.0)
+Released on 2016-04-11.
+
+# Change Log
 All notable changes to this project will be documented in this file.
 
 ## [1.1.0](https://github.com/18plan/IFXRefresher/releases/tag/1.1.0)
@@ -16,3 +22,4 @@ Released on 2016-04-08.
 
 #### Added
 - Initial release of IFXRefresher.
+
