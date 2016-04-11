@@ -102,6 +102,7 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
 - (NSMutableSet *)getParamNames:(Class)clazz {
     NSMutableSet *pNames = [NSMutableSet set];
     NSMutableArray *pNameArray = self.configuredVCAndParams[NSStringFromClass(clazz)];
+    [pNames addObjectsFromArray:pNameArray];
     if (pNameArray == nil || pNameArray.count == 0) {
         [self getParamNames:[self.curViewController class] toSet:pNames];
     }
