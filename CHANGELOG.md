@@ -1,4 +1,10 @@
 # Change Log
+Fix possible missed navi case.
+
+## [1.1.2](https://github.com/18plan/IFXRefresher/releases/tag/1.0.0)
+Released on 2016-04-12.
+
+# Change Log
 Fix to add some possible missed params.
 
 ## [1.1.1](https://github.com/18plan/IFXRefresher/releases/tag/1.0.0)
