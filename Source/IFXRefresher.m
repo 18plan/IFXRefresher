@@ -171,8 +171,11 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
     switch (self.curViewControllerShowType) {
         case IFXRefresherShowTypeNavi: {
             UINavigationController *navVC = vc.navigationController;
-            [navVC popViewControllerAnimated:NO];
-            [navVC pushViewController:newVC animated:NO];
+            NSArray *array = navVC.viewControllers;
+            NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithArray:array];
+            NSUInteger index = [array indexOfObject:vc];
+            mutableArray[index] = newVC;
+            navVC.viewControllers = mutableArray;
         }
             break;
 
