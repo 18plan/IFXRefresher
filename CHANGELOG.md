@@ -1,17 +1,17 @@
 # Change Log
-Fix possible missed navi case.
+All notable changes to this project will be documented in this file.
 
-## [1.1.2](https://github.com/18plan/IFXRefresher/releases/tag/1.0.0)
+## [1.1.2](https://github.com/18plan/IFXRefresher/releases/tag/1.1.2)
 Released on 2016-04-12.
 
-# Change Log
-Fix to add some possible missed params.
+#### Fixed
+- Fix only one controller in navi pop not work.
 
-## [1.1.1](https://github.com/18plan/IFXRefresher/releases/tag/1.0.0)
+## [1.1.1](https://github.com/18plan/IFXRefresher/releases/tag/1.1.1)
 Released on 2016-04-11.
 
-# Change Log
-All notable changes to this project will be documented in this file.
+#### Fixed
+- Add some possible missed params in base controller.
 
 ## [1.1.0](https://github.com/18plan/IFXRefresher/releases/tag/1.1.0)
 Released on 2016-04-09.
