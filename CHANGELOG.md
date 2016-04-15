@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.1.3](https://github.com/18plan/IFXRefresher/releases/tag/1.1.3)
+Released on 2016-04-15.
+
+#### Added
+- Add support refresh root viewcontroller.
+
 ## [1.1.2](https://github.com/18plan/IFXRefresher/releases/tag/1.1.2)
 Released on 2016-04-12.
 

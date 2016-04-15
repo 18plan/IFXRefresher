@@ -29,6 +29,7 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
     IFXRefresherShowTypeNavi,
     IFXRefresherShowTypeTabbar,
     IFXRefresherShowTypeSplit,
+    IFXRefresherShowTypeRoot,
 };
 
 @interface IFXRefresher ()
@@ -201,7 +202,12 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
             tabbarVC.selectedIndex = index;
         }
             break;
-
+            
+        case IFXRefresherShowTypeRoot: {
+            [[UIApplication sharedApplication] delegate].window.rootViewController = newVC;
+        }
+            break;
+            
         case IFXRefresherShowTypeUnknown: {
             NSLog(@"#IFXRefresher# IFXRefresherShowTypeUnknown not support");
         }
@@ -212,8 +218,12 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
 }
 
 - (void)findCurViewControllerAndShowType {
-    UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *viewController = [[UIApplication sharedApplication] delegate].window.rootViewController;
     self.curViewController = [self findBestViewController:viewController];
+    
+    if ([viewController isEqual:self.curViewController]) {
+        self.curViewControllerShowType = IFXRefresherShowTypeRoot;
+    }
 }
 
 - (UIViewController *)findBestViewController:(UIViewController *)vc {

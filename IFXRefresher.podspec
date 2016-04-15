@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'IFXRefresher'
-  s.version  = '1.1.2'
+  s.version  = '1.1.3'
   s.license  = 'MIT'
   s.summary  = 'Injection for Xcode auto Refresher, accelerates iOS development.'
   s.homepage = 'https://github.com/18plan/IFXRefresher'
