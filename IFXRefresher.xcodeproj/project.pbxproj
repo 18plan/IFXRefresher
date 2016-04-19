@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F6154A401CB8ABDE00840573 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F6154A3E1CB8ABDE00840573 /* README.md */; };
-		F6154A421CB8AE8600840573 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = F6154A411CB8AE8600840573 /* CHANGELOG.md */; };
 		F693CA0D1CB8B46700EE05C3 /* IFXRefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = F693CA0C1CB8B46700EE05C3 /* IFXRefresher.m */; };
 /* End PBXBuildFile section */
 
@@ -129,8 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F693CA0D1CB8B46700EE05C3 /* IFXRefresher.m in Sources */,
-				F6154A401CB8ABDE00840573 /* README.md in Sources */,
-				F6154A421CB8AE8600840573 /* CHANGELOG.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +170,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -212,7 +208,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
