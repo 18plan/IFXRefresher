@@ -218,18 +218,18 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
 }
 
 - (void)findCurViewControllerAndShowType {
-    UIViewController *viewController = [[UIApplication sharedApplication] delegate].window.rootViewController;
-    self.curViewController = [self findBestViewController:viewController];
+    UIViewController *rootController = [[UIApplication sharedApplication] delegate].window.rootViewController;
+    self.curViewController = [self findTopViewController:rootController];
     
-    if ([viewController isEqual:self.curViewController]) {
+    if ([rootController isEqual:self.curViewController]) {
         self.curViewControllerShowType = IFXRefresherShowTypeRoot;
     }
 }
 
-- (UIViewController *)findBestViewController:(UIViewController *)vc {
+- (UIViewController *)findTopViewController:(UIViewController *)vc {
     if (vc.presentedViewController) {
         self.curViewControllerShowType = IFXRefresherShowTypePresented;
-        return [self findBestViewController:vc.presentedViewController];
+        return [self findTopViewController:vc.presentedViewController];
     }
 
     if ([vc isKindOfClass:[UISplitViewController class]]) {
@@ -239,7 +239,7 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
             return vc;
         }
 
-        return [self findBestViewController:svc.viewControllers.lastObject];
+        return [self findTopViewController:svc.viewControllers.lastObject];
     }
 
     if ([vc isKindOfClass:[UINavigationController class]]) {
@@ -249,7 +249,7 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
             return vc;
         }
 
-        return [self findBestViewController:svc.topViewController];
+        return [self findTopViewController:svc.topViewController];
     }
 
     if ([vc isKindOfClass:[UITabBarController class]]) {
@@ -259,7 +259,7 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
             return vc;
         }
 
-        return [self findBestViewController:svc.selectedViewController];
+        return [self findTopViewController:svc.selectedViewController];
     }
 
     self.curViewControllerShowType = self.curViewControllerShowType ?: IFXRefresherShowTypeUnknown;
