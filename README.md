@@ -9,7 +9,7 @@ running app's current viewcontroller, after we inject source from Xcode.
 - Xcode 7.0+
 
 ## Installation
-pod 'IFXRefresher', '~> 1.0'
+pod 'IFXRefresher', '~>1.1.3'
 
 ## Usage
 First of all, you should install injectionforxcode Xcode plugin.
