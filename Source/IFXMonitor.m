@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "IFXRefresher.h"
+#import "IFXMonitor.h"
 #import <objc/runtime.h>
 
 typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
@@ -32,14 +32,14 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
     IFXRefresherShowTypeRoot,
 };
 
-@interface IFXRefresher ()
+@interface IFXMonitor ()
 @property(nonatomic, assign) IFXRefresherShowType curViewControllerShowType;
 @property(nonatomic, weak) UIViewController *curViewController;
 @property(nonatomic, strong) NSMutableDictionary *configuredVCAndParams;
 @property(nonatomic, strong) NSString *defaultParameterPrefix;
 @end
 
-@implementation IFXRefresher
+@implementation IFXMonitor
 
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
@@ -62,13 +62,13 @@ typedef NS_ENUM(NSInteger, IFXRefresherShowType) {
 
 + (void)startMonitor {
 #ifdef DEBUG
-    [[IFXRefresher sharedInstance] startMonitor];
+    [[IFXMonitor sharedInstance] startMonitor];
 #endif
 }
 
 + (void)addViewControllerName:(NSString *)vcName withParamNames:(NSArray *)pNames {
 #ifdef DEBUG
-    [[IFXRefresher sharedInstance] addViewControllerName:vcName withParamNames:pNames];
+    [[IFXMonitor sharedInstance] addViewControllerName:vcName withParamNames:pNames];
 #endif
 }
 

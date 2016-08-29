@@ -22,7 +22,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IFXRefresher : NSObject
+@interface IFXMonitor : NSObject
 
 + (void)startMonitor;
 

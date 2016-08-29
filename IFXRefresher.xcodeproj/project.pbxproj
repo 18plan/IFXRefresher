@@ -7,32 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F693CA0D1CB8B46700EE05C3 /* IFXRefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = F693CA0C1CB8B46700EE05C3 /* IFXRefresher.m */; };
+		F64AE8E41D73C87500537413 /* IFXRefresher.h in Headers */ = {isa = PBXBuildFile; fileRef = F64AE8E21D73C87500537413 /* IFXRefresher.h */; };
+		F64AE8E61D73C9FC00537413 /* IFXMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F693CA0C1CB8B46700EE05C3 /* IFXMonitor.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F6441BEA1CB79D2A00D53855 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F6154A3E1CB8ABDE00840573 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F6154A3F1CB8ABDE00840573 /* IFXRefresher.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IFXRefresher.podspec; sourceTree = "<group>"; };
 		F6154A411CB8AE8600840573 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		F6441BEC1CB79D2A00D53855 /* libIFXRefresher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIFXRefresher.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F693CA0B1CB8B46700EE05C3 /* IFXRefresher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFXRefresher.h; sourceTree = "<group>"; };
-		F693CA0C1CB8B46700EE05C3 /* IFXRefresher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFXRefresher.m; sourceTree = "<group>"; };
+		F64AE8D91D73C82800537413 /* IFXRefresher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IFXRefresher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F64AE8E21D73C87500537413 /* IFXRefresher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFXRefresher.h; sourceTree = "<group>"; };
+		F64AE8E31D73C87500537413 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F693CA0B1CB8B46700EE05C3 /* IFXMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFXMonitor.h; sourceTree = "<group>"; };
+		F693CA0C1CB8B46700EE05C3 /* IFXMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFXMonitor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F6441BE91CB79D2A00D53855 /* Frameworks */ = {
+		F64AE8D51D73C82800537413 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,6 +36,7 @@
 		F6441BE31CB79D2A00D53855 = {
 			isa = PBXGroup;
 			children = (
+				F64AE8E11D73C87500537413 /* Framework */,
 				F693CA0A1CB8B46700EE05C3 /* Source */,
 				F6154A411CB8AE8600840573 /* CHANGELOG.md */,
 				F6154A3E1CB8ABDE00840573 /* README.md */,
@@ -56,30 +48,51 @@
 		F6441BED1CB79D2A00D53855 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6441BEC1CB79D2A00D53855 /* libIFXRefresher.a */,
+				F64AE8D91D73C82800537413 /* IFXRefresher.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F64AE8E11D73C87500537413 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				F64AE8E21D73C87500537413 /* IFXRefresher.h */,
+				F64AE8E31D73C87500537413 /* Info.plist */,
+			);
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		F693CA0A1CB8B46700EE05C3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F693CA0B1CB8B46700EE05C3 /* IFXRefresher.h */,
-				F693CA0C1CB8B46700EE05C3 /* IFXRefresher.m */,
+				F693CA0B1CB8B46700EE05C3 /* IFXMonitor.h */,
+				F693CA0C1CB8B46700EE05C3 /* IFXMonitor.m */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		F64AE8D61D73C82800537413 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F64AE8E41D73C87500537413 /* IFXRefresher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		F6441BEB1CB79D2A00D53855 /* IFXRefresher */ = {
+		F64AE8D81D73C82800537413 /* IFXRefresher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6441BF51CB79D2B00D53855 /* Build configuration list for PBXNativeTarget "IFXRefresher" */;
+			buildConfigurationList = F64AE8DE1D73C82800537413 /* Build configuration list for PBXNativeTarget "IFXRefresher" */;
 			buildPhases = (
-				F6441BE81CB79D2A00D53855 /* Sources */,
-				F6441BE91CB79D2A00D53855 /* Frameworks */,
-				F6441BEA1CB79D2A00D53855 /* CopyFiles */,
+				F64AE8D41D73C82800537413 /* Sources */,
+				F64AE8D51D73C82800537413 /* Frameworks */,
+				F64AE8D61D73C82800537413 /* Headers */,
+				F64AE8D71D73C82800537413 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -87,8 +100,8 @@
 			);
 			name = IFXRefresher;
 			productName = IFXRefresher;
-			productReference = F6441BEC1CB79D2A00D53855 /* libIFXRefresher.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = F64AE8D91D73C82800537413 /* IFXRefresher.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -99,7 +112,7 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = ShandaGames;
 				TargetAttributes = {
-					F6441BEB1CB79D2A00D53855 = {
+					F64AE8D81D73C82800537413 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -116,17 +129,27 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F6441BEB1CB79D2A00D53855 /* IFXRefresher */,
+				F64AE8D81D73C82800537413 /* IFXRefresher */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		F64AE8D71D73C82800537413 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		F6441BE81CB79D2A00D53855 /* Sources */ = {
+		F64AE8D41D73C82800537413 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F693CA0D1CB8B46700EE05C3 /* IFXRefresher.m in Sources */,
+				F64AE8E61D73C9FC00537413 /* IFXMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,21 +238,45 @@
 			};
 			name = Release;
 		};
-		F6441BF61CB79D2B00D53855 /* Debug */ = {
+		F64AE8DF1D73C82800537413 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.18plan.IFXRefresher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		F6441BF71CB79D2B00D53855 /* Release */ = {
+		F64AE8E01D73C82800537413 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Framework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.18plan.IFXRefresher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -245,14 +292,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6441BF51CB79D2B00D53855 /* Build configuration list for PBXNativeTarget "IFXRefresher" */ = {
+		F64AE8DE1D73C82800537413 /* Build configuration list for PBXNativeTarget "IFXRefresher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F6441BF61CB79D2B00D53855 /* Debug */,
-				F6441BF71CB79D2B00D53855 /* Release */,
+				F64AE8DF1D73C82800537413 /* Debug */,
+				F64AE8E01D73C82800537413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
