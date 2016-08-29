@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6A2DF141D73D30F00AF0BB6 /* IFXRefresher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6A2DF131D73D30F00AF0BB6 /* IFXRefresher.framework */; };
 		F6FF24C81D73399300118EF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FF24C71D73399300118EF5 /* main.m */; };
 		F6FF24CB1D73399300118EF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FF24CA1D73399300118EF5 /* AppDelegate.m */; };
 		F6FF24CE1D73399300118EF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6FF24CD1D73399300118EF5 /* ViewController.m */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F6A2DF131D73D30F00AF0BB6 /* IFXRefresher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IFXRefresher.framework; path = "../build/Debug-iphoneos/IFXRefresher.framework"; sourceTree = "<group>"; };
 		F6FF24C31D73399300118EF5 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FF24C71D73399300118EF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F6FF24C91D73399300118EF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -31,15 +33,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A2DF141D73D30F00AF0BB6 /* IFXRefresher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6A2DF121D73D30200AF0BB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6A2DF131D73D30F00AF0BB6 /* IFXRefresher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F6FF24BA1D73399300118EF5 = {
 			isa = PBXGroup;
 			children = (
+				F6A2DF121D73D30200AF0BB6 /* Frameworks */,
 				F6FF24C51D73399300118EF5 /* Example */,
 				F6FF24C41D73399300118EF5 /* Products */,
 			);
@@ -243,7 +255,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.18plan.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -255,7 +267,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.18plan.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,6 +293,7 @@
 				F6FF24DC1D73399300118EF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
