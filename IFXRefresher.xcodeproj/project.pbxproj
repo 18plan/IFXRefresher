@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F64AE8E41D73C87500537413 /* IFXRefresher.h in Headers */ = {isa = PBXBuildFile; fileRef = F64AE8E21D73C87500537413 /* IFXRefresher.h */; };
+		F64AE8E41D73C87500537413 /* IFXRefresher.h in Headers */ = {isa = PBXBuildFile; fileRef = F64AE8E21D73C87500537413 /* IFXRefresher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F64AE8E61D73C9FC00537413 /* IFXMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F693CA0C1CB8B46700EE05C3 /* IFXMonitor.m */; };
+		F64AE8E71D73CDDF00537413 /* IFXMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = F693CA0B1CB8B46700EE05C3 /* IFXMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F6154A3E1CB8ABDE00840573 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F6154A3F1CB8ABDE00840573 /* IFXRefresher.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IFXRefresher.podspec; sourceTree = "<group>"; };
-		F6154A411CB8AE8600840573 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		F64AE8D91D73C82800537413 /* IFXRefresher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IFXRefresher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64AE8E21D73C87500537413 /* IFXRefresher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFXRefresher.h; sourceTree = "<group>"; };
 		F64AE8E31D73C87500537413 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,11 +34,8 @@
 		F6441BE31CB79D2A00D53855 = {
 			isa = PBXGroup;
 			children = (
-				F64AE8E11D73C87500537413 /* Framework */,
 				F693CA0A1CB8B46700EE05C3 /* Source */,
-				F6154A411CB8AE8600840573 /* CHANGELOG.md */,
-				F6154A3E1CB8ABDE00840573 /* README.md */,
-				F6154A3F1CB8ABDE00840573 /* IFXRefresher.podspec */,
+				F64AE8E11D73C87500537413 /* Supporting Files */,
 				F6441BED1CB79D2A00D53855 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,12 +48,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F64AE8E11D73C87500537413 /* Framework */ = {
+		F64AE8E11D73C87500537413 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				F64AE8E21D73C87500537413 /* IFXRefresher.h */,
 				F64AE8E31D73C87500537413 /* Info.plist */,
 			);
+			name = "Supporting Files";
 			path = Framework;
 			sourceTree = "<group>";
 		};
@@ -79,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64AE8E41D73C87500537413 /* IFXRefresher.h in Headers */,
+				F64AE8E71D73CDDF00537413 /* IFXMonitor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +296,7 @@
 				F64AE8E01D73C82800537413 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
