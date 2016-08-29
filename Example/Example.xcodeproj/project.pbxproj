@@ -51,8 +51,8 @@
 		F6FF24BA1D73399300118EF5 = {
 			isa = PBXGroup;
 			children = (
-				F6A2DF121D73D30200AF0BB6 /* Frameworks */,
 				F6FF24C51D73399300118EF5 /* Example */,
+				F6A2DF121D73D30200AF0BB6 /* Frameworks */,
 				F6FF24C41D73399300118EF5 /* Products */,
 			);
 			sourceTree = "<group>";
